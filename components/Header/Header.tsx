@@ -1,6 +1,7 @@
 import { Box, Button, Heading, HStack } from "native-base";
 import Image from "next/image";
 import React from "react";
+import { ConnectWallet } from "../Buttons/ConnectWallet";
 
 export const Header = () => {
   return (
@@ -12,7 +13,7 @@ export const Header = () => {
       py="16px"
       width="full"
     >
-      <Heading size="lg" mr="auto">
+      <Heading size="l" mr="auto">
         Twinter
       </Heading>
 
@@ -31,21 +32,7 @@ export const Header = () => {
       >
         Connect Twitter
       </Button>
-      <Button
-        leftIcon={
-          <Image
-            alt="Metamask"
-            src="/assets/imgs/metamask.svg"
-            objectFit="cover"
-            width={22}
-            height={22}
-          />
-        }
-        _hover={{ backgroundColor: "yellow.600" }}
-        bg="yellow.500"
-      >
-        Connect MetaMask
-      </Button>
+      <ConnectWallet />
     </HStack>
   );
 };
